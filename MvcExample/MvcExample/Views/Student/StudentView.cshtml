@@ -1,0 +1,15 @@
+﻿@model MvcExample.Models.Student
+@{
+    ViewBag.Title = "StudentView";
+}
+
+<h2>StudentView</h2>
+
+<form action="@Url.Action("UpdateStudentDetails", "Student")"
+      method="Post">
+    @Html.LabelFor(m => m.Id)
+    @Html.TextBoxFor(m => m.Id)
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    <input type="submit"></input>
+</form>
